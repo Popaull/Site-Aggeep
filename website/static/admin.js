@@ -89,6 +89,9 @@ if(list=="qui_sommes_nous"){
   arch_link='rientamere'
 }
 
+if(list=="philo_semaine"){
+  arch_link=arch_del.children[0].children[2].getAttribute('src');
+}
 else{
    arch_link= arch_del.children[0].children[0].getAttribute('src')
 }
@@ -103,7 +106,7 @@ $.ajax({
   url: '/del_arch_txt',
   data: {arch:arch_del , arch_link:arch_link,list:list},
    success: function () {
-     location.reload()
+     
 }
 
 });
@@ -190,6 +193,54 @@ $(document).ready(function () {
       data: {text:text , ifram:ifram},
       success: function () {
         location.reload()
+    }
+  
+  });
+
+    // e.preventDefault();
+
+  });
+})
+
+
+const file_philo=document.getElementById("file_philo")
+const nom_philo=document.getElementById("nom_phil")
+const para_phil=document.getElementById("para_phil")
+const btn_phil=document.getElementById("btn_phil")
+
+$(document).ready(function () {
+  $(btn_phil).click(function () { 
+
+    let text = para_phil.value
+    let nom_file = file_philo.files[0].name
+    let nom_phil = nom_philo.value
+    let file = new FormData();
+    nom_file=nom_file.replace(" ","_");
+    nom_file=nom_file.replace("(","");
+    nom_file=nom_file.replace(")","");
+    nom_file=nom_file.replace("é","e");
+    nom_file=nom_file.replace("è","e");
+    file.append('file' , $(file_philo)[0].files[0]);
+    console.log(nom_file);
+    
+
+  
+    $.ajax({
+      type: "POST",
+      url: "/data",
+      data: file,
+      contentType: false,
+      cache: false,
+      processData: false,
+    
+     
+    });
+    $.ajax({
+      type: "POST",
+      url: '/phil_txt',
+      data: {text:text , nom_file:nom_file,nom_phil:nom_phil},
+      success: function () {
+       
     }
   
   });

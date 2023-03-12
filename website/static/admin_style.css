@@ -52,7 +52,10 @@ section{
     transition: 0.5s;
        
 }
-
+.contp{
+  width: 0px;
+  overflow: hidden;
+}
 #header a{
   transition: 0.5s;
 }

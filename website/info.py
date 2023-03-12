@@ -52,7 +52,7 @@ elec_tresor=get_list("elec_tresor",'elec_tresor')
 elec_aff_poli=get_list("elec_aff_poli",'elec_aff_poli')
 elec_aff_peda=get_list("elec_aff_peda",'elec_aff_peda')
 
-
+philo_semaine = get_list("philo_semaine","philo_semaine")
 quisomme=get_list("qui_sommes_nous",'qui_sommes_nous')
 
 @info.route('/arch_img', methods = ['POST'])
@@ -116,7 +116,7 @@ def get_post_javascript_data():
     for file in files:
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join('./website/static/test',filename))
+            file.save(os.path.join('./website/static/img_philo',filename))
             success=True
         else:
             return print("fichier non comprensible")
@@ -162,4 +162,4 @@ def page_admin():
         return render_template("admin_file.html",list_arch=''.join(get_list("list_arch",'list_arch')),aff_ext=''.join(get_list("elec_aff_ext",'elec_aff_ext'))
     ,aff_in=''.join( get_list("elec_aff_int",'elec_aff_int')),aff_peda=''.join( get_list("elec_aff_peda",'elec_aff_peda')) ,aff_poli=''.join( get_list("elec_aff_poli",'elec_aff_poli')) 
     ,aff_socio=''.join( get_list("elec_aff_socio",'elec_aff_socio')) ,comm=''.join( get_list("elec_comm",'elec_comm')) ,coo=''.join( get_list("elec_coo_g",'elec_coo_g'))
-    ,secre=''.join( get_list("elec_secré",'elec_secré')),tresor=''.join( get_list("elec_tresor",'elec_tresor')),qui_somme=''.join(get_list("qui_sommes_nous","qui_sommes_nous")))
+    ,secre=''.join( get_list("elec_secré",'elec_secré')),tresor=''.join( get_list("elec_tresor",'elec_tresor')),qui_somme=''.join(get_list("qui_sommes_nous","qui_sommes_nous")),philo=''.join(get_list("philo_semaine","philo_semaine")))

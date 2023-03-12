@@ -19,7 +19,6 @@
 .titre{
     margin-left: 2%;
     position: relative;
-    top: 10%;
     font-size: 3.5vh;
     letter-spacing: 0.5rem;
     
@@ -27,7 +26,7 @@
 }
 .nom_phil{
     position: relative;
-    top: 12%;
+    margin-top: 2%;
     margin-left: 2%;
     font-size: 2em;
 }
