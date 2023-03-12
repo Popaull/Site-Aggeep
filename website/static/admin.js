@@ -3,6 +3,7 @@ const bnt_archive = document.getElementById("btn_archive")
 const text_archive = document.getElementById("text_archive")
 const file_archive = document.getElementById("file_archive")
 const a_arch = document.getElementById("a_arch")
+
 $(document).ready(function () {
     $(bnt_archive).click(function () { 
 
@@ -80,14 +81,19 @@ function htmlEntities(str) {
 function del_arch(element,list){
 let arch_del = element.parentElement;
 let arch_link
+
 if(list=='list_arch'){
    arch_link= arch_del.firstChild.getAttribute('href');
+}
+if(list=="qui_sommes_nous"){
+  arch_link='rientamere'
 }
 
 else{
    arch_link= arch_del.children[0].children[0].getAttribute('src')
 }
-
+console.log(list);
+console.log(arch_link);
 arch_link = arch_link.replace(" ","_");
 arch_link = arch_link.replace("(","");
 arch_link = arch_link.replace(")","");
@@ -165,4 +171,30 @@ $(function() {
    }
    }
 
+})
+
+
+const btn_qui_somme = document.getElementById("btn_quisommes")
+const txt_face = document.getElementById("txt_face")
+const ifram_face = document.getElementById("if_face")
+
+$(document).ready(function () {
+  $(btn_qui_somme).click(function () { 
+
+    let text = txt_face.value
+    let ifram = ifram_face.value
+  
+    $.ajax({
+      type: "POST",
+      url: '/fac_txt',
+      data: {text:text , ifram:ifram},
+      success: function () {
+        location.reload()
+    }
+  
+  });
+
+    // e.preventDefault();
+
+  });
 })

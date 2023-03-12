@@ -43,6 +43,8 @@ elec_aff_peda=get_list("elec_aff_peda")
 
 
 
+qui_sommes_nous=get_list("qui_sommes_nous")
+
 @views.route('/elec_txt', methods=['POST'])
 def elec_txt():
     choix= request.form["choix"]
@@ -119,6 +121,16 @@ def signUpUser():
     save_liste("list_arch",list_arch)
     return list_arch
 
+@views.route('/fac_txt', methods=['POST'])
+def fac_txt():
+    ifram = request.form["ifram"]
+    text = request.form["text"]
+    element = f' <div class="divquisomme "><h3>{text}</h3>{ifram}</div>'
+    element=element.strip('""')
+    qui_sommes_nous.append(element)
+    save_liste("qui_sommes_nous",qui_sommes_nous)
+    return qui_sommes_nous
+
 
 @views.route('/del_arch_txt', methods=['POST'])
 def del_arch():
@@ -126,12 +138,17 @@ def del_arch():
     link = request.form["arch_link"]
     list_del = request.form["list"]
     print(arch)
+
     def check(n_list,lien):
         if list_del == lien:
+            if lien == "qui_sommes_nous":
+                 n_list.remove(arch)
+                 save_liste(lien,n_list)
+                 return n_list
             n_list.remove(arch)
             save_liste(lien,n_list)
             os.remove("./website"+link)
-
+    
     check(list_arch,"list_arch")
     check(elec_aff_socio,"elec_aff_socio")
     check(elec_coo_g,"elec_coo_g")
@@ -142,6 +159,7 @@ def del_arch():
     check(elec_tresor,"elec_tresor")
     check(elec_aff_poli,"elec_aff_poli")
     check(elec_aff_peda,"elec_aff_peda")
+    check(qui_sommes_nous,"qui_sommes_nous")
 
     return arch
    
@@ -153,7 +171,7 @@ def del_arch():
 def home():
     return render_template("index.html",np=str(nom_phil),pnp=str(para_philo),img=str(image),l_img=''.join(image_im()),arch_agg=''.join(list_arch),aff_ext=''.join(elec_aff_ext)
     ,aff_in=''.join(elec_aff_int),aff_peda=''.join(elec_aff_peda) ,aff_poli=''.join(elec_aff_poli) ,aff_socio=''.join(elec_aff_socio) ,comm=''.join(elec_comm) ,coo=''.join(elec_coo_g)
-    ,secre=''.join(elec_secré),tresor=''.join(elec_tresor)  )
+    ,secre=''.join(elec_secré),tresor=''.join(elec_tresor),qui_somme=''.join(qui_sommes_nous)  )
 
 
 

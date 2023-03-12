@@ -574,10 +574,9 @@ padding-top: 5%;
   font-size: 1.6vw;
 }
 
-.divquisomme iframe p{
-  color: #edf4f885;
+.divquisomme iframe {
+ background-color: #edf4f8;
+width:  26.274vw !important;
+height:546px !important;
 }
 
-.text_exposed_root{
-  color: #edf4f8; !important;
-}
