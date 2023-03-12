@@ -1,0 +1,123 @@
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhiloUL</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='philo.css')}}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='info.css')}}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='admin_style.css')}}"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="archive_aggeep">
+      <h1>archive actuelle</h1>
+      <div id="arch">
+        {{list_arch|safe}}
+       
+          
+      </div>
+      <h1>Ajouter une archive aggeep</h1>
+      <input type="file" id="file_archive">
+      <input  id="text_archive" type="text">
+      <button id="btn_archive">Envoyer</button>
+
+    </section>
+  <section id="politique">
+    <h1>Politique</h1>
+    <input id="select_img" type="file">
+  </section>
+  <section style="text-align: center;">
+    <h1 style="font-size: 2em;">Election</h1>
+     <div>
+      <h1>Ajouté une candidature</h1>
+      <select  id="choix_elec">
+        <option value="affaires_socio">Affaires socioculturelles</option>
+        <option value="coo_gene">Coordination générale</option>
+        <option value="affaire_inter">Affaire interne</option>
+        <option value="affare_ext">Affaire externe</option>
+        <option value="secreta">Secrétariat</option>
+        <option value="comm">Communication</option>
+        <option value="tresorie">Trésorie</option>
+        <option value="affaire_poli">Affaire politique</option>
+        <option value="affaire_peda">Affaire pédagogique</option>
+    </select>
+
+    <input id="elec_img"  type="file">
+    <textarea id="text_elec"></textarea>
+    <button id="btn_elec">Envoyer</button>
+      </div>
+    <h1 style="margin-top: 30px;">Election actuelle</h1>
+    <section id="affaires_socioculturelles">
+      <h3>Affaire socioculturelles</h3>
+        {{aff_socio|safe}}
+    </section>
+    <section  id="Coordination_générale">
+      <h3>Coordination générale</h3>
+        {{coo|safe}}
+    </section>
+    <section  id="Affaire_interne">
+      <h3>Affaire interne</h3>
+        {{aff_in|safe}}
+    </section >
+    <section  id="Affaire_externe">
+      <h3>Affaire externe</h3>
+      
+        {{aff_ext|safe}}
+    </section>
+    <section  id="Secrétariat">
+      <h3>Secrétariat</h3>
+        {{secre|safe}}
+    </section>
+    <section  id="Communication">
+      <h3>Communication</h3>
+        {{comm|safe}}
+    </section>
+    <section  id="Trésorie">
+      <h3>Trésorie</h3>
+
+        {{tresor|safe}}
+    </section>
+    <section  id="Affaire_politique">
+      <h3>Affaire Politique</h3>
+        {{aff_poli|safe}}
+    </section>
+    <section  id="Affaire_pédagogiques">
+      <h3>Affaire pédagogique</h3>
+        {{aff_peda|safe}}
+    </section>
+  </section>
+
+  </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script
+    src="https://kit.fontawesome.com/2072588427.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='admin.js')}}"
+  ></script>
+
+</html>
+
+
+
+
+

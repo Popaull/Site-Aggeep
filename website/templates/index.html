@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhiloUL</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='philo.css')}}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='info.css')}}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css')}}"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#page" id="home"> <i class="fa-solid fa-house"></i></a>
+      <span id="time"></span>
+      <div href="" id="b_bar">
+        <i id="boutton_m" class="fa-solid fa-bars"></i>
+      </div>
+
+      <div id="menu">
+        <div class="para_m">
+          <h2>Philosophie</h2>
+          <h3>
+            <a href="#philosophe_de_la_semaine">Le philosophe de la semaine</a>
+          </h3>
+          <h3><a>Archive Philosophe de la semaine</a></h3>
+          <h2>Informations</h2>
+          <h3><a href="#vie_etudiante">Guide de la vie étudiante</a></h3>
+          <h3><a href=" #info_page ">Calendrier AGEEPP</a></h3>
+          <h3><a href="">Vie universitaire</a></h3>
+          <h2>Politique</h2>
+          <h3><a href="#aggeep">AGGEEP</a></h3>
+          <h3><a href="">Rubrique politique</a></h3>
+          <h2>université</h2>
+          <h3><a href="">Revue universitaire</a></h3>
+          <h3><a href="">Qui somme nous</a></h3>
+          <h2>Administration</h2>
+          <h3><a id="connection">Connection</a></h3>
+          
+        </div>
+
+        <div class="reseau">
+          <a id="ag" href="https://www.facebook.com/asso.ageepp"
+            >AGEEPP <i id="fag" class="fa-brands fa-facebook"></i
+          ></a>
+          <input type="text" id="mdp" >
+          <a id="ac" href="https://www.facebook.com/acepulaval"
+            >ACEP <i id="fac" class="fa-brands fa-facebook"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <style>
+      #philosophe_de_la_semaine {
+        background-color: #0a0a0a;
+        height: 110vh;
+        width: 100vw;
+        background-size: cover;
+      }
+    </style>
+    <section id="page">
+      <div class="ptxt">
+        <h2>Bienvenue sur le site de l’AGEEPP - ACEP</h2>
+        <a href="https://www.ulaval.ca/"
+          ><img
+            src="{{ url_for('static', filename='ulaval_og.png')}}"
+            alt="image de l'université laval"
+        /></a>
+        <a href="#baspage">
+          <div class="arrow bounce"></div>
+        </a>
+      </div>
+
+      <div class="pbg">
+        <iframe
+           src="https://www.youtube.com/embed/2j87vUSadHg?&autoplay=1&mute=1&playsinline=1&playlist=2j87vUSadHg&loop=1&amp;controls=0&amp&amp;showinfo=0&amp;modestbranding=1 "
+          id="video"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          
+        ></iframe>
+      </div>
+    </section>
+    <div
+      class="fondu"
+      style="  background: linear-gradient(0deg, #0a0a0a 0%, rgba(0,0,0,1) 85%); "
+    ></div>
+    <section id="philosophe_de_la_semaine">
+      <h1 class="titre">Le philosophe de la semaine</h1>
+      <h2 class="nom_phil">{{np}}</h2>
+      <div class="contp">
+        <span>{{pnp}}</span>
+      </div>
+    </section>
+
+    <div
+      class="fondu"
+      style="  background: linear-gradient(0deg, #0f0f0f 0%, #0a0a0a  85%); ">
+    </div>
+    <section id="vie_etudiante">
+
+      <div class="contslider">
+        <div onclick="precedentc()"  id="precedent" ><</div>
+        
+      <div class="slider">
+        
+       
+        <div class="slider-viewport">
+         
+        <div id="img1">
+            <div id="img2">
+            <div id="img3">
+                <div id="img4">
+                <div id="img5">
+                  <div id="img6">
+            <div id="img7">
+            <div id="img8">
+                <div id="img9">
+                <div id="img10">
+                  <div id="img11">
+                    <div class="slider-content">
+
+          
+            <img src="{{ url_for('static', filename='/slider/0.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/1.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/2.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/3.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/4.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/7.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/8.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/9.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/11.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/12.png')}}" alt="slider" >
+            <img src="{{ url_for('static', filename='/slider/13.png')}}" alt="slider" >
+          </div>
+          </div>
+          </div>
+                </div>
+            </div>
+            </div>        
+            </div>
+          </div>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+        </div>
+      </div>
+        <div onclick="suivantc()" id="suivant" >></div>
+    </div>
+   
+    </section>
+
+    <section id="info_page">
+      <h1 class="titre_c">CALENDRIER</h1>
+
+      <iframe
+        class="calandrier"
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23616161&ctz=America%2FToronto&showTitle=0&showTz=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&src=aW5mb2FnZWVwcEBnbWFpbC5jb20&color=%23039BE5"
+      ></iframe>
+    </section>
+
+    
+
+  <section id="aggeep">
+    <h1>AGGEEP</h1>
+    <div class="flex_aggeep" >
+      <h3 onclick="slide('election')">Election</h3>
+      <h3   onclick="slide('archive')">Archive</h3>
+      <h3 onclick="slide('quinous')">Qui sommes-nous</h3>
+    </div>
+  </section>
+  <section id="election">
+    <h1>Election</h1>
+     <div id="flex_elec">
+      <h3 onclick="slide_elec('affaires_socioculturelles',this)">Affaires socioculturelles</h3>
+      <h3 onclick="slide_elec('Coordination_générale',this)">Coordination générale</h3>
+      <h3 onclick="slide_elec('Affaire_interne',this)">Affaire interne</h3>
+      <h3 onclick="slide_elec('Affaire_externe',this)">Affaire externe</h3>
+      <h3 onclick="slide_elec('Secrétariat',this)">Secrétariat</h3>
+      <h3 onclick="slide_elec('Communication',this)">Communication</h3>
+      <h3 onclick="slide_elec('Trésorie',this)">Trésorie</h3>
+      <h3 onclick="slide_elec('Affaire_politique',this)">Affaire politique</h3>
+      <h3 onclick="slide_elec('Affaire_pédagogiques',this)">Affaire pédagogiques</h3>
+    </div>
+    <div id="section_elec">
+    <section id="affaires_socioculturelles">
+      <p class="p_sec_elec">La Coordination aux affaires socioculturelles doit : <br>
+        1° voir au maintien des bonnes relations entre les étudiant.e.s des différents programmes offerts par la faculté en proposant des activités autant récréatives qu’éducatives, ce qui inclut notamment, mais non exclusivement des évènements festifs, des ciné-philos ou des bières-philo ; 
+        <br> 2° s’assurer, en lien avec la Coordination aux communications, que tous les membres de l’Association soient au courant de la tenue de telles activités.</p>
+
+        {{aff_socio|safe}}
+    </section>
+    <section  id="Coordination_générale">
+      <p class="p_sec_elec">La Coordination générale doit : 
+        <br>1° représenter l’Association et parler officiellement en son nom ; 
+        <br>2° convoquer le Conseil exécutif ;
+        <br>3° présider les réunions du Conseil exécutif ;
+        <br>4° s’assurer de la communication entre l’Association et le personnel de la Faculté, conjointement à la Coordination aux affaires internes ; 
+        <br>5° s’assurer que la transmission de l’information aux membres de l’Association soit réalisée de façon régulière ; 
+        <br>6° veiller à l’application de la présente Charte ; 
+        <br>7° signer, au nom de l’Association, tous les documents officiels ; 
+        <br>8° signer tous les chèques émis par l’Association, conjointement à la Trésorerie ; 
+        <br>9° s’assurer de la passation des pouvoirs ; 
+        <br>10° assister et coordonner les membres du Conseil exécutif et des comités annexes dans leurs fonctions ; 
+        <br>11° siéger aux comités jugés pertinents ; 
+        <br>12° maintenir une bonne connaissance des dossiers en cours et des procédures de l’Association. 
+        
+        {{coo|safe}}
+    </section>
+    <section  id="Affaire_interne">
+      <p class="p_sec_elec">La Coordination aux affaires internes doit, en lien avec la Coordination aux communications : 
+       <br> 1° s’assurer de la communication entre l’Association et le personnel de la Faculté ; 
+       <br> 2° s’assurer de la communication entre l’Association et tous ses membres ; 
+       <br> 3° en début d’année académique, récupérer la liste des Membres de l’Association au Bureau de la Vie étudiante (BVE) ; 
+       <br>4° s’assurer du dynamisme des initiatives locales et de la visibilité des activités proposées par l’Association ;
+       <br>5° recueillir les commentaires des membres de l’Association sur la qualité et l’harmonie de la vie facultaire ; 
+       <br>6° assurer la publication de la revue Le Banquet ;
+       <br>7° occuper la coordination générale par intérim en cas de vacance du poste.
+        {{aff_in|safe}}
+    </section >
+    <section  id="Affaire_externe">
+      <p class="p_sec_elec">La Coordination aux affaires externes doit : 
+       <br> 1° se conformer aux positions en vigueur dans le Cahier de positions lorsqu’elle représente l’Association ;
+       <br> 2° assurer la communication avec les autres associations étudiantes en ce qui a trait aux affaires politiques ; 
+       <br> 3° représenter l’Association au sein de la CADEUL et des associations nationales s’il y a lieu et s’assurer que les étudiant.e.s soient informé.e.s des dossiers les concernant au niveau du campus ainsi qu’aux paliers provincial, national et international ; 
+       <br> 4° siéger à tout comité jugé pertinent par l’Assemblée générale et par le Conseil exécutif ; 
+       <br> 5° siéger au caucus des associations membres de la CADEUL et sur les organes pertinents des associations nationales dont l’Association est membre, le cas échéant ;
+       <br>  6° représenter l’Association dans tous ses contacts non facultaires, que ce soit sur le campus de l’Université, dans la région de Québec ou au niveau national et défendre fidèlement les mandats adoptés en assemblée générale.
+        {{aff_ext|safe}}
+    </section>
+    <section  id="Secrétariat">
+      <p class="p_sec_elec">Le Secrétariat doit : 
+       <br> 1° s’assurer de l’archivage des dossiers et documents officiels de l’Association et voir à ce que ceux-ci soient constamment à jour ; 
+       <br> 2° rédiger les procès-verbaux des réunions du Conseil exécutif et les soumettre à l’approbation de ses membres ;
+       <br> 3° s’occuper de la logistique des réunions du Conseil exécutif et des Assemblées générales.
+
+        {{secre|safe}}
+    </section>
+    <section  id="Communication">
+      <p class="p_sec_elec">La Coordination aux communications doit : 
+        <br> 1° veiller à ce que le contenu de la page Facebook de l’Association soit toujours à jour ; 
+        <br> 2° conjointement avec la Coordination aux affaires internes, s’assurer de la communication entre l’Association et ses membres.
+        {{comm|safe}}
+    </section>
+    <section  id="Trésorie">
+      <p class="p_sec_elec">La Trésorerie doit : 
+       <br> 1° s’occuper de l’administration financière de l’Association ; 
+       <br> 2° s’assurer de la perception de la cotisation des membres de l’Association par l’intermédiaire des frais de scolarité ; 
+       <br> 3° être en mesure de fournir en tout instant les indications pertinentes sur les états financiers de l’Association ; 
+       <br> 4° déposer un rapport financier à la fin de chaque année académique ;
+       <br> 5° signer, conjointement à la Coordination générale, tous les chèques émis par l’Association ; 
+       <br>  6° s’assurer du paiement des factures ;
+       <br> 7° seconder le Secrétariat dans le soutien logistique de l’Association ;
+       <br>  8° s’assurer d’effectuer les remboursements et les dons une fois les pièces justificatives recueillies (reçus, factures) ;
+       <br> 9° émettre des recommandations concernant la tarification des billets dans le cadre d’activités socioculturelles ;
+       <br> 10° veiller à ce que l’ensemble des cotisations des membres soit dépensé dans sa totalité durant l’année universitaire;
+       <br> 11° rendre accessible le budget à tout.e membre qui en fait la demande et éclairer toute interrogation.
+
+        {{tresor|safe}}
+    </section>
+    <section  id="Affaire_politique">
+      <p class="p_sec_elec">La Coordination aux affaires politiques doit :
+       <br> 1° siéger au nom de l'Association à la Commission des affaires sociopolitiques (CASP) ;
+       <br>2° organiser, au moins une fois par session d'automne et d'hiver, des Assemblées générales de révision du Cahier des Positions, telles que définies à l’article 16 ;
+       <br> 3° permettre la politisation des membres en les mettant en relation avec les instances pertinentes ;
+       <br>4° rester en communication étroite avec la Coordination des affaires externes ;
+       <br> 5° favoriser la démocratie délibérative et le dynamisme politique au sein de l’Association ; 
+       <br>6° organiser et structurer les activités politiques votées en Assemblée générale.
+        {{aff_poli|safe}}
+    </section>
+    <section  id="Affaire_pédagogiques">
+      <p class="p_sec_elec">La Coordination aux affaires pédagogiques doit : 
+       <br> 1° siéger aux comités suivants : Conseil de Faculté, Comité de programme ainsi que tout autre comité jugé pertinent ; 
+       <br> 2° être en mesure d’informer et d’aider tout.e étudiant.e en conflit avec un membre du personnel de la Faculté ; 
+       <br> 3° représenter l’opinion des étudiants au sujet de la formation universitaire et émettre des recommandations au sujet des cours actuels, conformément aux orientations pédagogiques prises par l’Association en Assemblée générale ; 
+       <br> 4° présenter au Conseil exécutif tout bilan des modifications et des recommandations formulées à l’égard de la formation générale ; 
+       <br> 5° fournir toutes les informations pertinentes au sujet des cours optionnels chaque trimestre ;
+       <br> 6° s’assurer d’aller chercher un maximum d’informations au sujet des ressources universitaires mises en place pour la défense des droits pédagogiques des étudiant.e.s et celles nécessaires pour le respect de l’article 19.5.
+        {{aff_peda|safe}}
+    </section>
+  </div>
+  </section>
+  <section id="archive">
+    <h1>Archive</h1>
+    <div class="flexarch">
+      {{arch_agg|safe}}
+  </div>
+  </section>
+  <section id="quinous">
+    <div class="divquisomme ">
+      <h3> Paul-coté</h3>
+      <iframe id="postfb" frameborder="0" width="500" height="546" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasso.ageepp%2Fposts%2F652672096563260&amp;show_text=true&amp;width=500" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" data-caption="Arielle - Trésorière" style="width: 458.5px; background-color: #edf4f859; height: 500.682px;" class="scroll-transition-fade" data-scale="100"></iframe>
+   </div>
+  </section>
+  <!-- <section id="politique">
+    <h1> Rubrique politique </h1>
+    <div class="image_flex">
+    {{l_img |safe}}</div>
+  </section>
+
+    <section id="contenu">
+      
+      <div
+        class="flexcont"
+        data-aos="fade-up"
+        data-aos-offset="0"
+        data-aos-delay="200"
+        data-aos-duration="1500"
+      >
+        <div class="cont">
+          <a href="/informations"
+            ><img
+              class="info"
+              src="{{ url_for('static', filename='info.png')}}"
+              alt="Image info"
+          /></a>
+          <h4 class="txtcont">Informations</h4>
+        </div>
+        <div class="cont">
+          <a href=""
+            ><img
+              class="rubrique"
+              src="{{ url_for('static', filename='rubrique.png')}}"
+              alt="Image rubrique politique"
+          /></a>
+          <h4 class="txtcont">Rubrique politique</h4>
+        </div>
+        <div class="cont">
+          <a href="./le_philosophe_de_la_semaine"
+            ><img
+              class="philo"
+              src="{{ url_for('static', filename='philo.png')}}"
+              alt="Image Philosophe de la semaine"
+          /></a>
+          <h4 class="txtcont">Le philosophe de <br />la semaine</h4>
+        </div>
+        <div class="cont">
+          <a href=""
+            ><img
+              class="revu"
+              src="{{ url_for('static', filename='revu.png')}}"
+              alt="Image Revue universitaire"
+          /></a>
+          <h4 class="txtcont">Revue universitaire</h4>
+        </div>
+      </div>
+    </section> -->
+    <section id="baspage">
+      <div class="flexbaspage">
+        <img src="{{ url_for('static', filename='philulaval.png')}}" alt="" />
+        <div class="flextxt">
+          <h2>
+            Site de l’association de la faculté de philosphie de l’université
+            Laval
+          </h2>
+          <h3>Collaboration de l’ageepp et de l’acep</h3>
+          <h4>
+            <a href=""> Qui sommes nous ? </a> | Plus d’informations sur le site
+            de l’université laval :<a href=" https://www.fp.ulaval.ca">
+              https://www.fp.ulaval.ca</a
+            >
+          </h4>
+          <h4>
+            Pour toute question/demande/suggestion : Contacte nous ! | Pour
+            toute demande concernant le site : Jules.cot.1@ulaval.ca
+          </h4>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script
+    src="https://kit.fontawesome.com/2072588427.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='index.js')}}"
+  ></script>
+
+</html>
+
+
+
+
+
+<!-- <h1>Informations</h1>
+<h2>Faculté de phylosphie</h2>
+<div>
+  <img src="" alt="">
+  <p></p>
+  </div>
+  <img src="" alt="">
+  <div class="flexpara">
+  <p class="date" >08/11/2022</p>
+  <h3>identifié</h3>
+  <p>Le local étudiant, ouvert à tous les élèves de la faculté de philosphie, est maintenant identifié ! Un peu plus sérieux, nos locaux ont maintenant offciellement un nom. </p>
+</div>
+<img src="" alt="">
+  <p></p>
+  </div>
+  <img src="" alt="">
+  <div class="flexpara">
+  <p class="date" >08/11/2022</p>
+  <h3>identifié</h3>
+  <p>Le local étudiant, ouvert à tous les élèves de la faculté de philosphie, est maintenant identifié ! Un peu plus sérieux, nos locaux ont maintenant offciellement un nom. </p>
+
+  </div>
+</section> -->

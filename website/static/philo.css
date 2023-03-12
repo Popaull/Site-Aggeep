@@ -1,0 +1,46 @@
+
+.bg{
+    
+    z-index: -3;
+    background-size: cover;
+   
+}
+
+#pagephilo{
+    padding-top: 15vh;
+    font-size: 2.6vh;
+    
+    height: 100vh;
+    
+}
+
+
+
+.titre{
+    margin-left: 2%;
+    position: relative;
+    top: 10%;
+    font-size: 3.5vh;
+    letter-spacing: 0.5rem;
+    
+    width: 35%;
+}
+.nom_phil{
+    position: relative;
+    top: 12%;
+    margin-left: 2%;
+    font-size: 2em;
+}
+.contp{
+    padding-top:10%;
+    width: 70%;
+    font-size: 1.5vw;
+    position: absolute;
+     right: 2px;
+}
+.contp span  {
+    
+   
+    background-color: rgba(0, 0, 0, 0.719);
+   
+}
