@@ -64,12 +64,7 @@
     </header>
 
     <style>
-      #philosophe_de_la_semaine {
-        background-color: #0a0a0a;
-        height: 110vh;
-        width: 100vw;
-        background-size: cover;
-      }
+      
     </style>
     <section id="page">
       <div class="ptxt">
@@ -101,10 +96,8 @@
     ></div>
     <section id="philosophe_de_la_semaine">
       <h1 class="titre">Le philosophe de la semaine</h1>
-      <h2 class="nom_phil">{{np}}</h2>
-      <div class="contp">
-        <span>{{pnp}}</span>
-      </div>
+      {{philo|safe}}
+
     </section>
 
     <div
@@ -303,10 +296,7 @@
   </div>
   </section>
   <section id="quinous">
-    <div class="divquisomme ">
-      <h3> Paul-coté</h3>
-      <iframe id="postfb" frameborder="0" width="500" height="546" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasso.ageepp%2Fposts%2F652672096563260&amp;show_text=true&amp;width=500" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" data-caption="Arielle - Trésorière" style="width: 458.5px; background-color: #edf4f859; height: 500.682px;" class="scroll-transition-fade" data-scale="100"></iframe>
-   </div>
+    {{qui_somme|safe}}
   </section>
   <!-- <section id="politique">
     <h1> Rubrique politique </h1>

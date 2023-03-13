@@ -170,8 +170,21 @@ a:hover{
     
 }
 
-
-
+#philosophe_de_la_semaine {
+  background-color: #0a0a0a;
+  height: 110vh;
+  width: 100vw;
+  
+  background-size: cover;
+}
+#philosophe_de_la_semaine img{
+  position: relative;
+  top: 30vw;
+  max-width: 300px;
+  max-height: 300px;
+  padding-left: 2.5vw;
+  width: 25vw;
+}
 
 .fondu{
   height: 10vh;
@@ -574,10 +587,9 @@ padding-top: 5%;
   font-size: 1.6vw;
 }
 
-.divquisomme iframe p{
-  color: #edf4f885;
+.divquisomme iframe {
+ background-color: #edf4f8;
+width:  26.274vw !important;
+height:546px !important;
 }
 
-.text_exposed_root{
-  color: #edf4f8; !important;
-}

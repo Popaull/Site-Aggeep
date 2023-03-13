@@ -35,6 +35,35 @@
       <button id="btn_archive">Envoyer</button>
 
     </section>
+    <section id="quisommes">
+      <h1>Qui somme nous</h1>
+      <div>
+        <h3>Element actuelle :</h3>
+        {{qui_somme|safe}}
+      </div>
+      <div>
+        <div style="margin-left: auto; margin-right: auto; width: 30vw; display: flex; justify-content: center; align-items: center;">
+        <p>Nom prenom</p>
+        <input  id="txt_face" type="text">
+        <input  id="if_face" type="text">
+        <p>iframe facebook</p>
+      </div>
+      <button style="margin-top: 10px;" id="btn_quisommes">Envoyer</button>
+      </div>
+    </section>
+    <section id="philosophe_de_la_semaine">
+      <h1>philosophe_de_la_semaine</h1>
+      <div>
+        <h3>phylosophe actuelle:</h3>
+        {{philo|safe}}
+      </div>
+      <div>
+        <input type="file" id="file_philo">
+      <input  id="nom_phil" type="text">
+      <textarea id="para_phil"></textarea>
+      <button id="btn_phil">Envoyer</button>
+      </div>
+    </section>
   <section id="politique">
     <h1>Politique</h1>
     <input id="select_img" type="file">
