@@ -177,13 +177,19 @@ a:hover{
   
   background-size: cover;
 }
-#philosophe_de_la_semaine img{
+.contp{
+ 
+}
+.contp img{
   position: relative;
-  top: 30vw;
+  right: 30vw;
+  height: 20vw;
+  
+  bottom: 20vw;
   max-width: 300px;
-  max-height: 300px;
+  
   padding-left: 2.5vw;
-  width: 25vw;
+  
 }
 
 .fondu{
@@ -436,8 +442,10 @@ h1{
 /**************************************aggeep************** */
 
 #aggeep{
+  position: relative;
+  z-index: 2;
   height: 20vh;
-  background-color: #272727;
+  background-color: #0F0F0F;
 }
 
 #aggeep h1{
@@ -502,6 +510,8 @@ h1{
 }
 
 #flex_elec{
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-around;
 }

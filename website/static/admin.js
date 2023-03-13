@@ -85,22 +85,30 @@ let arch_link
 if(list=='list_arch'){
    arch_link= arch_del.firstChild.getAttribute('href');
 }
-if(list=="qui_sommes_nous"){
+else if(list=="qui_sommes_nous"){
   arch_link='rientamere'
 }
 
-if(list=="philo_semaine"){
-  arch_link=arch_del.children[0].children[2].getAttribute('src');
+else if(list=="philo_semaine"){
+  console.log(arch_del.children[0].children[1].children[1]);
+  arch_link=arch_del.children[0].children[1].children[1].getAttribute('src');
 }
 else{
-   arch_link= arch_del.children[0].children[0].getAttribute('src')
+  try {
+    arch_link= arch_del.children[0].children[0].getAttribute('src')
+  }
+   catch{
+    arch_link= "none"
+   }
 }
-console.log(list);
+console.log(arch_del);
 console.log(arch_link);
 arch_link = arch_link.replace(" ","_");
 arch_link = arch_link.replace("(","");
 arch_link = arch_link.replace(")","");
 arch_del=arch_del.innerHTML.replace('<i onclick="del_arch(this,\''+list+'\')" id="trash_i" class="fa fa-trash" aria-hidden="true"></i>', '');
+arch_del=arch_del.replace('amp', '');
+console.log(arch_del);
 $.ajax({
   type: "POST",
   url: '/del_arch_txt',
@@ -220,6 +228,7 @@ $(document).ready(function () {
     nom_file=nom_file.replace(")","");
     nom_file=nom_file.replace("é","e");
     nom_file=nom_file.replace("è","e");
+    text = text.replace(/(\r\n|\n|\r)/gm, "");
     file.append('file' , $(file_philo)[0].files[0]);
     console.log(nom_file);
     

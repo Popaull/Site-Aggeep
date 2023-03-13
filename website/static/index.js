@@ -144,7 +144,7 @@ video_ale();
 
 const select_img = document.getElementById("select_img");
 const inputFile = document.getElementById("file");
-const connection = document.getElementById("connection");
+const connection = document.getElementById("Connexion");
 const mdp = document.getElementById("mdp");
 
 let con_v = false;
@@ -182,17 +182,20 @@ const btn_archive = document.getElementById("btn_archive");
 const election = document.getElementById("election");
 const archive = document.getElementById("archive");
 const ag_div = document.getElementById("quinous");
+
+let list_agge = [election, archive, ag_div];
 let v_election = false;
 let v_archive = false;
 
-div_liste = [election, archive, ag_div];
+
 
 function slide(e) {
+  
   const element = document.getElementById(e);
   if (element.style.height > "0vh") {
     element.style.height = "0vh";
   } else {
-    div_liste.forEach((element) => {
+    list_agge.forEach((element) => {
       element.style.height = "0vh";
     });
 

@@ -1,7 +1,7 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Blueprint, render_template, url_for, json, request
 import os
-
+import difflib
 
 views = Blueprint('views', __name__)
 
@@ -119,7 +119,7 @@ def philo():
     nom_file = request.form["nom_file"]
     text = request.form["text"]
     nom_phil = request.form["nom_phil"]
-    element = f'<div><h2 class="nom_phil">{nom_phil}</h2><div class="contp"><p>{text}</p></div><img src="/static/img_philo/{nom_file}"></div>'
+    element = f'<div><h2 class="nom_phil">{nom_phil}</h2><div class="contp"><p>{text}</p><img src="/static/img_philo/{nom_file}"></div></div>'
     element = element.strip('""')
     philo_semaine.append(element)
     save_liste("philo_semaine", philo_semaine)
@@ -130,7 +130,7 @@ def philo():
 def fac_txt():
     ifram = request.form["ifram"]
     text = request.form["text"]
-    element = f' <div class="divquisomme "><h3>{text}</h3>{ifram}</div>'
+    element = f'<div class="divquisomme "><h3>{text}</h3>{ifram}</div>'
     element = element.strip('""')
     qui_sommes_nous.append(element)
     save_liste("qui_sommes_nous", qui_sommes_nous)
@@ -140,19 +140,26 @@ def fac_txt():
 @views.route('/del_arch_txt', methods=['POST'])
 def del_arch():
     arch = request.form["arch"]
+    arch = f'{arch}'
     link = request.form["arch_link"]
     list_del = request.form["list"]
-    print(arch)
+    
 
     def check(n_list, lien):
         if list_del == lien:
             if lien == "qui_sommes_nous":
+                
+                difflib.get_close_matches(arch, n_list)
                 n_list.remove(arch)
                 save_liste(lien, n_list)
-                return n_list
-            n_list.remove(arch)
-            save_liste(lien, n_list)
-            os.remove("./website"+link)
+
+            else:
+                print(n_list)
+                print(str(difflib.get_close_matches(arch, n_list))[2:-2])
+                n_list.remove(str(difflib.get_close_matches(arch, n_list))[2:-2])
+                save_liste(lien, n_list)
+                os.remove("./website"+link)   
+           
     check(philo_semaine,"philo_semaine")
     check(list_arch, "list_arch")
     check(elec_aff_socio, "elec_aff_socio")

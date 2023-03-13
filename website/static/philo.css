@@ -27,6 +27,7 @@
 .nom_phil{
     position: relative;
     margin-top: 2%;
+    height: auto;
     margin-left: 2%;
     font-size: 2em;
 }

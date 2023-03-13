@@ -36,18 +36,21 @@
             <a href="#philosophe_de_la_semaine">Le philosophe de la semaine</a>
           </h3>
           <h3><a>Archive Philosophe de la semaine</a></h3>
+          <h3><a href="">Revue universitaire</a></h3>
           <h2>Informations</h2>
           <h3><a href="#vie_etudiante">Guide de la vie étudiante</a></h3>
           <h3><a href=" #info_page ">Calendrier AGEEPP</a></h3>
-          <h3><a href="">Vie universitaire</a></h3>
+          <h3><a href="">Rubrique politique</a></h3>
           <h2>Politique</h2>
           <h3><a href="#aggeep">AGGEEP</a></h3>
-          <h3><a href="">Rubrique politique</a></h3>
-          <h2>université</h2>
-          <h3><a href="">Revue universitaire</a></h3>
-          <h3><a href="">Qui somme nous</a></h3>
+          <h2>AGGEEP</h2>
+          <h3 onclick="slide('election')"><a href="#election" >Election</a></h3>
+          <h3  onclick="slide('archive')"><a href="#archive">Archive</a></h3>
+          <h3><a onclick="slide('quinous')" href="#quinous" >Qui sommes-nous</a></h3>
+          
+      
           <h2>Administration</h2>
-          <h3><a id="connection">Connection</a></h3>
+          <h3><a id="Connexion">Connexion</a></h3>
           
         </div>
 
@@ -104,6 +107,142 @@
       class="fondu"
       style="  background: linear-gradient(0deg, #0f0f0f 0%, #0a0a0a  85%); ">
     </div>
+    <section id="aggeep">
+      <h1>AGGEEP</h1>
+      <div class="flex_aggeep" >
+        <h3 onclick="slide('election')">Election</h3>
+        <h3   onclick="slide('archive')">Archive</h3>
+        <h3 onclick="slide('quinous')">Qui sommes-nous</h3>
+      </div>
+    </section>
+    <section id="election">
+      <h1>Election</h1>
+       <div id="flex_elec">
+        <h3 onclick="slide_elec('affaires_socioculturelles',this)">Affaires socioculturelles</h3>
+        <h3 onclick="slide_elec('Coordination_générale',this)">Coordination générale</h3>
+        <h3 onclick="slide_elec('Affaire_interne',this)">Affaire interne</h3>
+        <h3 onclick="slide_elec('Affaire_externe',this)">Affaire externe</h3>
+        <h3 onclick="slide_elec('Secrétariat',this)">Secrétariat</h3>
+        <h3 onclick="slide_elec('Communication',this)">Communication</h3>
+        <h3 onclick="slide_elec('Trésorie',this)">Trésorie</h3>
+        <h3 onclick="slide_elec('Affaire_politique',this)">Affaire politique</h3>
+        <h3 onclick="slide_elec('Affaire_pédagogiques',this)">Affaire pédagogiques</h3>
+      </div>
+      <div id="section_elec">
+      <section id="affaires_socioculturelles">
+        <p class="p_sec_elec">La Coordination aux affaires socioculturelles doit : <br>
+          1° voir au maintien des bonnes relations entre les étudiant.e.s des différents programmes offerts par la faculté en proposant des activités autant récréatives qu’éducatives, ce qui inclut notamment, mais non exclusivement des évènements festifs, des ciné-philos ou des bières-philo ; 
+          <br> 2° s’assurer, en lien avec la Coordination aux communications, que tous les membres de l’Association soient au courant de la tenue de telles activités.</p>
+  
+          {{aff_socio|safe}}
+      </section>
+      <section  id="Coordination_générale">
+        <p class="p_sec_elec">La Coordination générale doit : 
+          <br>1° représenter l’Association et parler officiellement en son nom ; 
+          <br>2° convoquer le Conseil exécutif ;
+          <br>3° présider les réunions du Conseil exécutif ;
+          <br>4° s’assurer de la communication entre l’Association et le personnel de la Faculté, conjointement à la Coordination aux affaires internes ; 
+          <br>5° s’assurer que la transmission de l’information aux membres de l’Association soit réalisée de façon régulière ; 
+          <br>6° veiller à l’application de la présente Charte ; 
+          <br>7° signer, au nom de l’Association, tous les documents officiels ; 
+          <br>8° signer tous les chèques émis par l’Association, conjointement à la Trésorerie ; 
+          <br>9° s’assurer de la passation des pouvoirs ; 
+          <br>10° assister et coordonner les membres du Conseil exécutif et des comités annexes dans leurs fonctions ; 
+          <br>11° siéger aux comités jugés pertinents ; 
+          <br>12° maintenir une bonne connaissance des dossiers en cours et des procédures de l’Association. 
+          
+          {{coo|safe}}
+      </section>
+      <section  id="Affaire_interne">
+        <p class="p_sec_elec">La Coordination aux affaires internes doit, en lien avec la Coordination aux communications : 
+         <br> 1° s’assurer de la communication entre l’Association et le personnel de la Faculté ; 
+         <br> 2° s’assurer de la communication entre l’Association et tous ses membres ; 
+         <br> 3° en début d’année académique, récupérer la liste des Membres de l’Association au Bureau de la Vie étudiante (BVE) ; 
+         <br>4° s’assurer du dynamisme des initiatives locales et de la visibilité des activités proposées par l’Association ;
+         <br>5° recueillir les commentaires des membres de l’Association sur la qualité et l’harmonie de la vie facultaire ; 
+         <br>6° assurer la publication de la revue Le Banquet ;
+         <br>7° occuper la coordination générale par intérim en cas de vacance du poste.
+          {{aff_in|safe}}
+      </section >
+      <section  id="Affaire_externe">
+        <p class="p_sec_elec">La Coordination aux affaires externes doit : 
+         <br> 1° se conformer aux positions en vigueur dans le Cahier de positions lorsqu’elle représente l’Association ;
+         <br> 2° assurer la communication avec les autres associations étudiantes en ce qui a trait aux affaires politiques ; 
+         <br> 3° représenter l’Association au sein de la CADEUL et des associations nationales s’il y a lieu et s’assurer que les étudiant.e.s soient informé.e.s des dossiers les concernant au niveau du campus ainsi qu’aux paliers provincial, national et international ; 
+         <br> 4° siéger à tout comité jugé pertinent par l’Assemblée générale et par le Conseil exécutif ; 
+         <br> 5° siéger au caucus des associations membres de la CADEUL et sur les organes pertinents des associations nationales dont l’Association est membre, le cas échéant ;
+         <br>  6° représenter l’Association dans tous ses contacts non facultaires, que ce soit sur le campus de l’Université, dans la région de Québec ou au niveau national et défendre fidèlement les mandats adoptés en assemblée générale.
+          {{aff_ext|safe}}
+      </section>
+      <section  id="Secrétariat">
+        <p class="p_sec_elec">Le Secrétariat doit : 
+         <br> 1° s’assurer de l’archivage des dossiers et documents officiels de l’Association et voir à ce que ceux-ci soient constamment à jour ; 
+         <br> 2° rédiger les procès-verbaux des réunions du Conseil exécutif et les soumettre à l’approbation de ses membres ;
+         <br> 3° s’occuper de la logistique des réunions du Conseil exécutif et des Assemblées générales.
+  
+          {{secre|safe}}
+      </section>
+      <section  id="Communication">
+        <p class="p_sec_elec">La Coordination aux communications doit : 
+          <br> 1° veiller à ce que le contenu de la page Facebook de l’Association soit toujours à jour ; 
+          <br> 2° conjointement avec la Coordination aux affaires internes, s’assurer de la communication entre l’Association et ses membres.
+          {{comm|safe}}
+      </section>
+      <section  id="Trésorie">
+        <p class="p_sec_elec">La Trésorerie doit : 
+         <br> 1° s’occuper de l’administration financière de l’Association ; 
+         <br> 2° s’assurer de la perception de la cotisation des membres de l’Association par l’intermédiaire des frais de scolarité ; 
+         <br> 3° être en mesure de fournir en tout instant les indications pertinentes sur les états financiers de l’Association ; 
+         <br> 4° déposer un rapport financier à la fin de chaque année académique ;
+         <br> 5° signer, conjointement à la Coordination générale, tous les chèques émis par l’Association ; 
+         <br>  6° s’assurer du paiement des factures ;
+         <br> 7° seconder le Secrétariat dans le soutien logistique de l’Association ;
+         <br>  8° s’assurer d’effectuer les remboursements et les dons une fois les pièces justificatives recueillies (reçus, factures) ;
+         <br> 9° émettre des recommandations concernant la tarification des billets dans le cadre d’activités socioculturelles ;
+         <br> 10° veiller à ce que l’ensemble des cotisations des membres soit dépensé dans sa totalité durant l’année universitaire;
+         <br> 11° rendre accessible le budget à tout.e membre qui en fait la demande et éclairer toute interrogation.
+  
+          {{tresor|safe}}
+      </section>
+      <section  id="Affaire_politique">
+        <p class="p_sec_elec">La Coordination aux affaires politiques doit :
+         <br> 1° siéger au nom de l'Association à la Commission des affaires sociopolitiques (CASP) ;
+         <br>2° organiser, au moins une fois par session d'automne et d'hiver, des Assemblées générales de révision du Cahier des Positions, telles que définies à l’article 16 ;
+         <br> 3° permettre la politisation des membres en les mettant en relation avec les instances pertinentes ;
+         <br>4° rester en communication étroite avec la Coordination des affaires externes ;
+         <br> 5° favoriser la démocratie délibérative et le dynamisme politique au sein de l’Association ; 
+         <br>6° organiser et structurer les activités politiques votées en Assemblée générale.
+          {{aff_poli|safe}}
+      </section>
+      <section  id="Affaire_pédagogiques">
+        <p class="p_sec_elec">La Coordination aux affaires pédagogiques doit : 
+         <br> 1° siéger aux comités suivants : Conseil de Faculté, Comité de programme ainsi que tout autre comité jugé pertinent ; 
+         <br> 2° être en mesure d’informer et d’aider tout.e étudiant.e en conflit avec un membre du personnel de la Faculté ; 
+         <br> 3° représenter l’opinion des étudiants au sujet de la formation universitaire et émettre des recommandations au sujet des cours actuels, conformément aux orientations pédagogiques prises par l’Association en Assemblée générale ; 
+         <br> 4° présenter au Conseil exécutif tout bilan des modifications et des recommandations formulées à l’égard de la formation générale ; 
+         <br> 5° fournir toutes les informations pertinentes au sujet des cours optionnels chaque trimestre ;
+         <br> 6° s’assurer d’aller chercher un maximum d’informations au sujet des ressources universitaires mises en place pour la défense des droits pédagogiques des étudiant.e.s et celles nécessaires pour le respect de l’article 19.5.
+          {{aff_peda|safe}}
+      </section>
+    </div>
+    </section>
+    <section id="archive">
+      <h1>Archive</h1>
+      <div class="flexarch">
+        {{arch_agg|safe}}
+    </div>
+    </section>
+    <section id="quinous">
+      {{qui_somme|safe}}
+    </section>
+    <section id="info_page">
+      <h1 class="titre_c">CALENDRIER</h1>
+
+      <iframe
+        class="calandrier"
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23616161&ctz=America%2FToronto&showTitle=0&showTz=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&src=aW5mb2FnZWVwcEBnbWFpbC5jb20&color=%23039BE5"
+      ></iframe>
+    </section>
     <section id="vie_etudiante">
 
       <div class="contslider">
@@ -159,145 +298,11 @@
    
     </section>
 
-    <section id="info_page">
-      <h1 class="titre_c">CALENDRIER</h1>
-
-      <iframe
-        class="calandrier"
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23616161&ctz=America%2FToronto&showTitle=0&showTz=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&src=aW5mb2FnZWVwcEBnbWFpbC5jb20&color=%23039BE5"
-      ></iframe>
-    </section>
+    
 
     
 
-  <section id="aggeep">
-    <h1>AGGEEP</h1>
-    <div class="flex_aggeep" >
-      <h3 onclick="slide('election')">Election</h3>
-      <h3   onclick="slide('archive')">Archive</h3>
-      <h3 onclick="slide('quinous')">Qui sommes-nous</h3>
-    </div>
-  </section>
-  <section id="election">
-    <h1>Election</h1>
-     <div id="flex_elec">
-      <h3 onclick="slide_elec('affaires_socioculturelles',this)">Affaires socioculturelles</h3>
-      <h3 onclick="slide_elec('Coordination_générale',this)">Coordination générale</h3>
-      <h3 onclick="slide_elec('Affaire_interne',this)">Affaire interne</h3>
-      <h3 onclick="slide_elec('Affaire_externe',this)">Affaire externe</h3>
-      <h3 onclick="slide_elec('Secrétariat',this)">Secrétariat</h3>
-      <h3 onclick="slide_elec('Communication',this)">Communication</h3>
-      <h3 onclick="slide_elec('Trésorie',this)">Trésorie</h3>
-      <h3 onclick="slide_elec('Affaire_politique',this)">Affaire politique</h3>
-      <h3 onclick="slide_elec('Affaire_pédagogiques',this)">Affaire pédagogiques</h3>
-    </div>
-    <div id="section_elec">
-    <section id="affaires_socioculturelles">
-      <p class="p_sec_elec">La Coordination aux affaires socioculturelles doit : <br>
-        1° voir au maintien des bonnes relations entre les étudiant.e.s des différents programmes offerts par la faculté en proposant des activités autant récréatives qu’éducatives, ce qui inclut notamment, mais non exclusivement des évènements festifs, des ciné-philos ou des bières-philo ; 
-        <br> 2° s’assurer, en lien avec la Coordination aux communications, que tous les membres de l’Association soient au courant de la tenue de telles activités.</p>
-
-        {{aff_socio|safe}}
-    </section>
-    <section  id="Coordination_générale">
-      <p class="p_sec_elec">La Coordination générale doit : 
-        <br>1° représenter l’Association et parler officiellement en son nom ; 
-        <br>2° convoquer le Conseil exécutif ;
-        <br>3° présider les réunions du Conseil exécutif ;
-        <br>4° s’assurer de la communication entre l’Association et le personnel de la Faculté, conjointement à la Coordination aux affaires internes ; 
-        <br>5° s’assurer que la transmission de l’information aux membres de l’Association soit réalisée de façon régulière ; 
-        <br>6° veiller à l’application de la présente Charte ; 
-        <br>7° signer, au nom de l’Association, tous les documents officiels ; 
-        <br>8° signer tous les chèques émis par l’Association, conjointement à la Trésorerie ; 
-        <br>9° s’assurer de la passation des pouvoirs ; 
-        <br>10° assister et coordonner les membres du Conseil exécutif et des comités annexes dans leurs fonctions ; 
-        <br>11° siéger aux comités jugés pertinents ; 
-        <br>12° maintenir une bonne connaissance des dossiers en cours et des procédures de l’Association. 
-        
-        {{coo|safe}}
-    </section>
-    <section  id="Affaire_interne">
-      <p class="p_sec_elec">La Coordination aux affaires internes doit, en lien avec la Coordination aux communications : 
-       <br> 1° s’assurer de la communication entre l’Association et le personnel de la Faculté ; 
-       <br> 2° s’assurer de la communication entre l’Association et tous ses membres ; 
-       <br> 3° en début d’année académique, récupérer la liste des Membres de l’Association au Bureau de la Vie étudiante (BVE) ; 
-       <br>4° s’assurer du dynamisme des initiatives locales et de la visibilité des activités proposées par l’Association ;
-       <br>5° recueillir les commentaires des membres de l’Association sur la qualité et l’harmonie de la vie facultaire ; 
-       <br>6° assurer la publication de la revue Le Banquet ;
-       <br>7° occuper la coordination générale par intérim en cas de vacance du poste.
-        {{aff_in|safe}}
-    </section >
-    <section  id="Affaire_externe">
-      <p class="p_sec_elec">La Coordination aux affaires externes doit : 
-       <br> 1° se conformer aux positions en vigueur dans le Cahier de positions lorsqu’elle représente l’Association ;
-       <br> 2° assurer la communication avec les autres associations étudiantes en ce qui a trait aux affaires politiques ; 
-       <br> 3° représenter l’Association au sein de la CADEUL et des associations nationales s’il y a lieu et s’assurer que les étudiant.e.s soient informé.e.s des dossiers les concernant au niveau du campus ainsi qu’aux paliers provincial, national et international ; 
-       <br> 4° siéger à tout comité jugé pertinent par l’Assemblée générale et par le Conseil exécutif ; 
-       <br> 5° siéger au caucus des associations membres de la CADEUL et sur les organes pertinents des associations nationales dont l’Association est membre, le cas échéant ;
-       <br>  6° représenter l’Association dans tous ses contacts non facultaires, que ce soit sur le campus de l’Université, dans la région de Québec ou au niveau national et défendre fidèlement les mandats adoptés en assemblée générale.
-        {{aff_ext|safe}}
-    </section>
-    <section  id="Secrétariat">
-      <p class="p_sec_elec">Le Secrétariat doit : 
-       <br> 1° s’assurer de l’archivage des dossiers et documents officiels de l’Association et voir à ce que ceux-ci soient constamment à jour ; 
-       <br> 2° rédiger les procès-verbaux des réunions du Conseil exécutif et les soumettre à l’approbation de ses membres ;
-       <br> 3° s’occuper de la logistique des réunions du Conseil exécutif et des Assemblées générales.
-
-        {{secre|safe}}
-    </section>
-    <section  id="Communication">
-      <p class="p_sec_elec">La Coordination aux communications doit : 
-        <br> 1° veiller à ce que le contenu de la page Facebook de l’Association soit toujours à jour ; 
-        <br> 2° conjointement avec la Coordination aux affaires internes, s’assurer de la communication entre l’Association et ses membres.
-        {{comm|safe}}
-    </section>
-    <section  id="Trésorie">
-      <p class="p_sec_elec">La Trésorerie doit : 
-       <br> 1° s’occuper de l’administration financière de l’Association ; 
-       <br> 2° s’assurer de la perception de la cotisation des membres de l’Association par l’intermédiaire des frais de scolarité ; 
-       <br> 3° être en mesure de fournir en tout instant les indications pertinentes sur les états financiers de l’Association ; 
-       <br> 4° déposer un rapport financier à la fin de chaque année académique ;
-       <br> 5° signer, conjointement à la Coordination générale, tous les chèques émis par l’Association ; 
-       <br>  6° s’assurer du paiement des factures ;
-       <br> 7° seconder le Secrétariat dans le soutien logistique de l’Association ;
-       <br>  8° s’assurer d’effectuer les remboursements et les dons une fois les pièces justificatives recueillies (reçus, factures) ;
-       <br> 9° émettre des recommandations concernant la tarification des billets dans le cadre d’activités socioculturelles ;
-       <br> 10° veiller à ce que l’ensemble des cotisations des membres soit dépensé dans sa totalité durant l’année universitaire;
-       <br> 11° rendre accessible le budget à tout.e membre qui en fait la demande et éclairer toute interrogation.
-
-        {{tresor|safe}}
-    </section>
-    <section  id="Affaire_politique">
-      <p class="p_sec_elec">La Coordination aux affaires politiques doit :
-       <br> 1° siéger au nom de l'Association à la Commission des affaires sociopolitiques (CASP) ;
-       <br>2° organiser, au moins une fois par session d'automne et d'hiver, des Assemblées générales de révision du Cahier des Positions, telles que définies à l’article 16 ;
-       <br> 3° permettre la politisation des membres en les mettant en relation avec les instances pertinentes ;
-       <br>4° rester en communication étroite avec la Coordination des affaires externes ;
-       <br> 5° favoriser la démocratie délibérative et le dynamisme politique au sein de l’Association ; 
-       <br>6° organiser et structurer les activités politiques votées en Assemblée générale.
-        {{aff_poli|safe}}
-    </section>
-    <section  id="Affaire_pédagogiques">
-      <p class="p_sec_elec">La Coordination aux affaires pédagogiques doit : 
-       <br> 1° siéger aux comités suivants : Conseil de Faculté, Comité de programme ainsi que tout autre comité jugé pertinent ; 
-       <br> 2° être en mesure d’informer et d’aider tout.e étudiant.e en conflit avec un membre du personnel de la Faculté ; 
-       <br> 3° représenter l’opinion des étudiants au sujet de la formation universitaire et émettre des recommandations au sujet des cours actuels, conformément aux orientations pédagogiques prises par l’Association en Assemblée générale ; 
-       <br> 4° présenter au Conseil exécutif tout bilan des modifications et des recommandations formulées à l’égard de la formation générale ; 
-       <br> 5° fournir toutes les informations pertinentes au sujet des cours optionnels chaque trimestre ;
-       <br> 6° s’assurer d’aller chercher un maximum d’informations au sujet des ressources universitaires mises en place pour la défense des droits pédagogiques des étudiant.e.s et celles nécessaires pour le respect de l’article 19.5.
-        {{aff_peda|safe}}
-    </section>
-  </div>
-  </section>
-  <section id="archive">
-    <h1>Archive</h1>
-    <div class="flexarch">
-      {{arch_agg|safe}}
-  </div>
-  </section>
-  <section id="quinous">
-    {{qui_somme|safe}}
-  </section>
+  
   <!-- <section id="politique">
     <h1> Rubrique politique </h1>
     <div class="image_flex">
@@ -361,7 +366,7 @@
           </h2>
           <h3>Collaboration de l’ageepp et de l’acep</h3>
           <h4>
-            <a href=""> Qui sommes nous ? </a> | Plus d’informations sur le site
+            <a href=""> Qui sommes-nous ? </a> | Plus d’informations sur le site
             de l’université laval :<a href=" https://www.fp.ulaval.ca">
               https://www.fp.ulaval.ca</a
             >
@@ -387,7 +392,9 @@
     type="text/javascript"
     src="{{ url_for('static', filename='index.js')}}"
   ></script>
-
+  <div> 
+    <h1 class="contactez-nous"> </h1>
+  </div>
 </html>
 
 
