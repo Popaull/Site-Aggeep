@@ -1,1 +1,2 @@
-<h1>test</h1
+<h1>test</h1>
+<div><h2 class="nom_phil">Souvenir</h2><div class="contp"><p>j'aime me rappeler des bonne chose de la vie</p></div><img src="/static/img_philo/1AEF4A24-BF67-466F-83C6-1BD1732A247E.jpg"></div>
