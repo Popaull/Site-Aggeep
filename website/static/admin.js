@@ -74,10 +74,6 @@ $(document).ready(function () {
 }
 
 
-function htmlEntities(str) {
-  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
 function del_arch(element,list){
 let arch_del = element.parentElement;
 let arch_link
@@ -137,6 +133,7 @@ $(document).ready(function () {
       nom_file=nom_file.replaceAll(")","");
       nom_file=nom_file.replaceAll("é","e");
       nom_file=nom_file.replaceAll("è","e");
+      text=text.replaceAll("\n","<br>")
     file.append('file' , $(elec_img)[0].files[0]);
     console.log(nom_file);
     
@@ -194,7 +191,7 @@ $(document).ready(function () {
 
     let text = txt_face.value
     let ifram = ifram_face.value
-  
+    text=text.replaceAll("\n","<br>")
     $.ajax({
       type: "POST",
       url: '/fac_txt',
@@ -228,6 +225,7 @@ $(document).ready(function () {
     nom_file=nom_file.replace(")","");
     nom_file=nom_file.replace("é","e");
     nom_file=nom_file.replace("è","e");
+    text=text.replaceAll("\n","<br>")
     text = text.replace(/(\r\n|\n|\r)/gm, "");
     file.append('file' , $(file_philo)[0].files[0]);
     console.log(nom_file);

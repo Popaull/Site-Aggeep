@@ -150,13 +150,13 @@ def del_arch():
             if lien == "qui_sommes_nous":
                 
                 difflib.get_close_matches(arch, n_list)
-                n_list.remove(arch)
+                n_list.remove(difflib.get_close_matches(arch, n_list).pop())
                 save_liste(lien, n_list)
 
             else:
                 print(n_list)
                 print(str(difflib.get_close_matches(arch, n_list))[2:-2])
-                n_list.remove(str(difflib.get_close_matches(arch, n_list))[2:-2])
+                n_list.remove(difflib.get_close_matches(arch, n_list).pop())
                 save_liste(lien, n_list)
                 os.remove("./website"+link)   
            

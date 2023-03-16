@@ -172,7 +172,7 @@ a:hover{
 
 #philosophe_de_la_semaine {
   background-color: #0a0a0a;
-  height: 110vh;
+  height: auto;
   width: 100vw;
   
   background-size: cover;
