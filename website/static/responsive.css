@@ -1,0 +1,15 @@
+@media screen and (min-width: 1600px) {
+    .para_m h2{
+font-size: 2em;
+}
+.para_m h3{
+ font-size: 1.5em;
+}
+.reseau {
+    
+    padding-top:30px ;
+ 
+  }
+
+
+}
