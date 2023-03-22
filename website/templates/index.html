@@ -44,9 +44,6 @@
           <h2>Informations</h2>
           <h3><a href="#vie_etudiante">Guide de la vie étudiante</a></h3>
           <h3><a href=" #info_page ">Calendrier AGEEPP</a></h3>
-          <h3><a href="">Rubrique politique</a></h3>
-          <h2>Politique</h2>
-          <h3><a href="#aggeep">AGGEEP</a></h3>
           <h2>AGGEEP</h2>
           <h3 onclick="slide('election')"><a href="#election">Election</a></h3>
           <h3 onclick="slide('archive')"><a href="#archive">Archive</a></h3>
@@ -100,8 +97,23 @@
       "
     ></div>
     <section id="philosophe_de_la_semaine">
-      <h1 class="titre">Le philosophe de la semaine</h1>
-      {{philo|safe}}
+      <div class="flex_aggeep">
+        <h3
+          onclick="slide('election')"
+          style="width: auto; padding-left: 10px; padding-right: 10px"
+        >
+          Le philosophe de la semaine
+        </h3>
+
+        <h3
+          onclick="slide('quinous')"
+          style="width: auto; padding-left: 10px; padding-right: 10px"
+        >
+          Archive des philosophe de la semaine
+        </h3>
+      </div>
+      <div id="divps">{{philo|safe}}</div>
+      <div id="divaps"></div>
     </section>
 
     <div
@@ -119,7 +131,7 @@
     <section id="election">
       <h1>Election</h1>
       <div id="flex_elec">
-        <h3 onclick="slide_elec('affaires_socioculturelles',this)">
+        <h3 id="first" onclick="slide_elec('affaires_socioculturelles',this)">
           Affaires socioculturelles
         </h3>
         <h3 onclick="slide_elec('Coordination_générale',this)">

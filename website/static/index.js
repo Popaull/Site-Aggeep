@@ -194,12 +194,17 @@ function slide(e) {
   const element = document.getElementById(e);
   if (element.style.height > "0vh") {
     element.style.height = "0vh";
-  } else {
+  }
+
+   else {
     list_agge.forEach((element) => {
       element.style.height = "0vh";
     });
 
     element.style.height = "100vh";
+    if (e == "election"){
+      slide_elec('Affaire_interne',document.getElementById("first"))
+    }
   }
 }
 
@@ -210,14 +215,10 @@ console.log(flex_elec);
 function slide_elec(e, ele) {
   const element = document.getElementById(e);
 
-  if (element.style.height > "0vh") {
-    element.style.height = "0vh";
-    ele.style.color = "#edf4f8";
-    ele.style.borderColor = "#edf4f8";
-  } else {
+
     for (const child of section_elec.children) {
       child.style.height = "0vh";
-    }
+    
 
     for (const child of flex_elec.children) {
       child.style.color = "#edf4f8";
