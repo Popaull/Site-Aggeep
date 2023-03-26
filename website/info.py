@@ -11,14 +11,14 @@ info = Blueprint('info', __name__)
 
 
 def save_liste(link,list):
-    file=open('./save/'+link+'.txt','w')
+    file=open('./save/'+link+'.txt','w',encoding="utf-8")
     for item in list:
         file.write(item+"\n")
     file.close
     
 def get_ip_list(link):
     list=[]
-    file = open('./save/'+link+'.txt','r')
+    file = open('./save/'+link+'.txt','r',encoding="utf-8", errors='ignore')
     for line in file:
         
         x = line[:-1]
@@ -28,7 +28,7 @@ def get_ip_list(link):
 
 def get_list(link,nom_list):
     list=[]
-    file = open('./save/'+link+'.txt','r')
+    file = open('./save/'+link+'.txt','r',encoding="utf-8", errors='ignore')
     for line in file:
         x = line[:-1]
         list.append("<div>"+x+f'<i onclick="del_arch(this,\'{nom_list}\')" id="trash_i" class="fa fa-trash" aria-hidden="true"></i>'+"</div>")
@@ -141,8 +141,9 @@ def signUpUser():
     ip_addr = request.environ.get('HTTP_X_FORWARDED_FOR', request.remote_addr)
     a = request.form["id"]
     if a == mdp:
-        list_adresse.append(ip_addr)
-        save_liste("save_ip",list_adresse)
+        if not ip_addr in list_adresse :
+            list_adresse.append(ip_addr)
+            save_liste("save_ip",list_adresse)
         print(f"{a} est le bon mot de passe")
         return a
     else :
@@ -156,8 +157,10 @@ def signUpUser():
 
 @info.route('/admin')
 def page_admin():
-    if request.remote_addr not in list_adresse:
-        abort(404)  # Not Found
+    ip_addr = request.environ.get('HTTP_X_FORWARDED_FOR', request.remote_addr)
+    print(ip_addr)
+    if ip_addr not in list_adresse:
+        return abort(404)  # Not Found
     else:
         return render_template("admin_file.html",list_arch=''.join(get_list("list_arch",'list_arch')),aff_ext=''.join(get_list("elec_aff_ext",'elec_aff_ext'))
     ,aff_in=''.join( get_list("elec_aff_int",'elec_aff_int')),aff_peda=''.join( get_list("elec_aff_peda",'elec_aff_peda')) ,aff_poli=''.join( get_list("elec_aff_poli",'elec_aff_poli')) 

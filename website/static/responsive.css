@@ -13,3 +13,242 @@ font-size: 2em;
 
 
 }
+
+/* *****************************************mobil H ************************************************ */
+@media only screen and (max-width: 768px) {
+  .phoneelec{
+    display: flex;
+    flex-direction: column;
+  }
+  #flex_elec{
+    flex-direction: column;
+    width: auto;
+    
+    height:auto ;
+    align-items: baseline;
+    justify-content:center ;
+  }
+  #flex_elec h3{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    font-size: 1em;
+  }
+ #election section {
+  margin-top: 0px;
+ }
+  .p_sec_elec{
+    width: 95%;
+    font-size: 1.2vh;
+    margin-top: 20px;
+  }
+  .elec_par{
+    width: 95%;
+  }
+  .elec_par p{
+    font-size: 1.5vh;
+  }
+  .titre_c{
+    font-size: 2vh;
+    width: auto;
+    margin: 0px;
+    text-align: center;
+  }
+  .calandrier{
+    width: 90%;
+    height: 40vh;
+  }
+  #info_page{
+    height: auto;
+    padding-bottom: 10%;
+  }
+ 
+
+
+.slider {
+  display: flex;
+  width: 90vw;
+  top:20%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  right:7.5vw
+}
+#vie_etudiante{
+  height: auto;
+  padding-bottom: 20%;
+}
+
+.slider-viewport {
+ 
+  width: 90vw;
+  height: 50vh;
+  overflow: hidden;
+}
+.slider-content {
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+.slider-content img {
+  width: 90vw;
+  height: 50vh;
+}
+.slider-nav {
+  position: absolute;
+  width: 100%;
+  bottom: -30px;
+  margin-top: 10px;
+  text-align: center;
+}
+#precedent {
+  position: relative;
+  left: 10vw;
+  z-index: 3;
+  margin-left:0% ;
+}
+.flextxt h2{
+  padding-left: 15px;
+  font-size: 1.5vh;
+  letter-spacing: inherit;
+}
+.flextxt h3{
+  padding-left: 15px;
+  font-size: 1.3vh;
+  letter-spacing: inherit;
+}
+.flextxt h4{
+  padding-left: 15px;
+  font-size: 1vh;
+  padding-top: 2px;
+  letter-spacing: inherit;
+}
+.flexbaspage img{
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 50%;
+}
+#suivant {
+  position: relative;
+  right: 25vw;
+  margin-right:0% ;
+}
+
+
+#img2:target .slider-content {
+  -webkit-transform: translateX(-90vw);
+          transform: translateX(-90vw);
+}
+#img3:target .slider-content {
+  -webkit-transform: translateX(-180vw);
+          transform: translateX(-180vw);
+}
+#img4:target .slider-content {
+  -webkit-transform: translateX(-270vw);
+          transform: translateX(-270vw);
+}
+#img5:target .slider-content {
+  -webkit-transform: translateX(-360vw);
+          transform: translateX(-360vw);
+}
+#img6:target .slider-content {
+  -webkit-transform: translateX(-450vw);
+          transform: translateX(-450vw);
+}
+#img7:target .slider-content {
+  -webkit-transform: translateX(-540vw);
+          transform: translateX(-540vw);
+}
+#img8:target .slider-content {
+  -webkit-transform: translateX(-630vw);
+          transform: translateX(-630vw);
+}
+#img9:target .slider-content {
+  -webkit-transform: translateX(-720vw);
+          transform: translateX(-720vw);
+}
+#img10:target .slider-content {
+  -webkit-transform: translateX(-810vw);
+          transform: translateX(-810vw);
+}
+#img11:target .slider-content {
+  -webkit-transform: translateX(-900vw);
+          transform: translateX(-900vw);
+}
+  a:hover{
+    color:inherit;
+    transition: 0.3s;
+  }
+  .divquisomme h3{
+    font-size: 1.8vh;
+
+  }
+  .divquisomme iframe {
+    background-color: #edf4f8;
+    width: 60vw !important;
+    height: 100vw !important;
+}
+  #home i:hover{
+    color:inherit;
+  }
+  #b_bar i:hover{
+    color:inherit;
+  }
+#page{
+  background: rgb(43,43,43);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(17, 17, 17) 46%, rgba(0,0,0) 100%);
+}
+.ptxt h2{
+  margin-top: 35vh;
+  font-size: 2em;
+}
+.ptxt img{
+  width: 20vh;
+}
+#menu{
+  width: 70%;
+}
+.para_m h2{
+  font-size: 1.5em;
+}
+.para_m h3{
+  font-size: 1em;
+}
+.reseau a {
+  padding-top: 5px;
+  font-size: 1em;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+}
+
+.flexphil{
+  flex-direction: column;
+  align-items: center;
+}
+
+.nom_phil{
+  font-size: 1.2em;
+}
+.flex_aggeep h3{
+  font-size: 1.5em;
+  
+}
+.flex_aggeep h3:nth-child(2) {
+  margin-left: 0px;
+}
+.flexphil{
+  flex-direction: column;
+  align-items: center;
+}
+.flexphil img{
+ height: 30vh;
+ width: auto;
+}
+.contp{
+  font-size: 0.9em;
+  margin-left: 25px;
+  width: 95%;
+}
+}

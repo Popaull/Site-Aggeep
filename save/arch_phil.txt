@@ -1,0 +1,4 @@
+<div><h2 class="nom_phil">bonjour </h2><div class="flexphil"><img class="img_phil" src="/static/img_philo/1AEF4A24-BF67-466F-83C6-1BD1732A247E.jpg"><div class="contp"><p>sdqfdqsfsqf</p></div></div></div>
+<div><h2 class="nom_phil">salut moi c'est paul</h2><div class="flexphil"><img class="img_phil" src="/static/img_philo/1a4ec413-7935-4f6c-8b2b-477d49681c7a.jpg"><div class="contp"><p>Bonjour</p></div></div></div>
+<div><h2 class="nom_phil">dgfsdfgsd</h2><div class="flexphil"><img class="img_phil" src="/static/img_philo/1a4ec413-7935-4f6c-8b2b-477d49681c7a.jpg"><div class="contp"><p>gdsguiuyixxwcfwxxx</p></div></div></div>
+<div><h2 class="nom_phil">Paul coté</h2><div class="flexphil"><img class="img_phil" src="/static/img_philo/0BEFC6F6-A354-42FA-8DA5-E950C75F74EC.jpg"><div class="contp"><p>Je suis le philosophe de base supprimer moi et ajouté un nouveau philosophe . <br>(Moins bien que moi je sais ) ^^</p></div></div></div>

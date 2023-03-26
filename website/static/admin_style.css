@@ -540,7 +540,17 @@ textarea{
 padding-top: 5%;
  width: 20%;
 }
-
+.img_phil{
+ 
+  width:0vw ;
+  overflow: hidden;
+  margin-left: 3%;
+ 
+ 
+  
+  
+  
+}
 .elec_par p {
   text-align: left;
   position: relative;
@@ -552,7 +562,9 @@ padding-top: 5%;
 }
 
 i{
+  position: relative !important;
   font-size: 1.6em;
+  z-index: 5;
 }
 #quisommes i {
   position: relative;

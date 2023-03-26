@@ -29,14 +29,18 @@
     margin-top: 2%;
     height: auto;
     margin-left: 2%;
-    font-size: 2em;
+    font-size: 1.8vw;
 }
 .contp{
+    
+    top: 0;
     padding-top:3%;
     width: 70%;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     right: 2px;
-    margin-left: 29vw;
+    margin-left: 10%;
+    margin-right: 3%;
+    height-space: nowrap;
 }
 .contp span  {
     

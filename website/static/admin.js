@@ -3,6 +3,18 @@ const bnt_archive = document.getElementById("btn_archive")
 const text_archive = document.getElementById("text_archive")
 const file_archive = document.getElementById("file_archive")
 const a_arch = document.getElementById("a_arch")
+const btn_elec=document.getElementById("btn_elec")
+const elec_img = document.getElementById("elec_img")
+const text_elec=document.getElementById("text_elec")
+const choix_elec = document.getElementById("choix_elec")
+const btn_qui_somme = document.getElementById("btn_quisommes")
+const txt_face = document.getElementById("txt_face")
+const ifram_face = document.getElementById("if_face")
+const file_philo=document.getElementById("file_philo")
+const nom_philo=document.getElementById("nom_phil")
+const para_phil=document.getElementById("para_phil")
+const btn_phil=document.getElementById("btn_phil")
+
 
 $(document).ready(function () {
     $(bnt_archive).click(function () { 
@@ -86,8 +98,8 @@ else if(list=="qui_sommes_nous"){
 }
 
 else if(list=="philo_semaine"){
-  console.log(arch_del.children[0].children[1].children[1]);
-  arch_link=arch_del.children[0].children[1].children[1].getAttribute('src');
+  console.log(arch_del.children[0].children[1].children[0]);
+  arch_link=arch_del.children[0].children[1].children[0].getAttribute('src');
 }
 else{
   try {
@@ -117,10 +129,7 @@ $.ajax({
 
 }
 
-const btn_elec=document.getElementById("btn_elec")
-const elec_img = document.getElementById("elec_img")
-const text_elec=document.getElementById("text_elec")
-const choix_elec = document.getElementById("choix_elec")
+
 
 $(document).ready(function () {
   $(btn_elec).click(function () { 
@@ -182,9 +191,7 @@ $(function() {
 })
 
 
-const btn_qui_somme = document.getElementById("btn_quisommes")
-const txt_face = document.getElementById("txt_face")
-const ifram_face = document.getElementById("if_face")
+
 
 $(document).ready(function () {
   $(btn_qui_somme).click(function () { 
@@ -208,10 +215,7 @@ $(document).ready(function () {
 })
 
 
-const file_philo=document.getElementById("file_philo")
-const nom_philo=document.getElementById("nom_phil")
-const para_phil=document.getElementById("para_phil")
-const btn_phil=document.getElementById("btn_phil")
+
 
 $(document).ready(function () {
   $(btn_phil).click(function () { 

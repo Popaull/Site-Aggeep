@@ -18,13 +18,43 @@ const img8 = document.getElementById("img8");
 const img9 = document.getElementById("img9");
 const img10 = document.getElementById("img10");
 const img11 = document.getElementById("img11");
+const sectp = document.getElementById("sect_p")
+const flex_phil = document.getElementById("flex_phil");
+const section_elec = document.getElementById("section_elec");
+const flex_elec = document.getElementById("flex_elec");
+const btn_election = document.getElementById("btn_election");
+const btn_archive = document.getElementById("btn_archive");
+
+const election = document.getElementById("election");
+const archive = document.getElementById("archive");
+const ag_div = document.getElementById("quinous");
+
+let list_agge = [election, archive, ag_div];
+let v_election = false;
+let v_archive = false;
 let nimg = 1;
 let etat_bar = 0;
+
+const select_img = document.getElementById("select_img");
+const inputFile = document.getElementById("file");
+const connection = document.getElementById("Connexion");
+const mdp = document.getElementById("mdp");
+const precedent = document.getElementById("precedent");
+const suivant = document.getElementById("suivant");
+const soundHandle=document.getElementById('video');
+let con_v = false;
+var phone = window.matchMedia("(max-width: 768px)")
 
 boutton_m.addEventListener("mouseup", () => {
   if (etat_bar == 0) {
     console.log(etat_bar);
-    menu.style.marginLeft = "70%";
+    if(phone.matches){
+      menu.style.marginLeft = "30%";
+    }
+    else{
+      menu.style.marginLeft = "70%";
+    }
+    
     menu.style.opacity = "1";
     etat_bar = 1;
   } else {
@@ -91,8 +121,7 @@ ac.addEventListener("mouseout", () => {
 
 // ***********************************Slider*****************************************
 
-const precedent = document.getElementById("precedent");
-const suivant = document.getElementById("suivant");
+
 
 function precedentc() {
   nimg -= 1;
@@ -142,12 +171,7 @@ video_ale();
 
 // ********************************Admin*********************************************
 
-const select_img = document.getElementById("select_img");
-const inputFile = document.getElementById("file");
-const connection = document.getElementById("Connexion");
-const mdp = document.getElementById("mdp");
 
-let con_v = false;
 connection.addEventListener("click", () => {
   if (con_v == false) {
     mdp.style.width = "30%";
@@ -176,16 +200,7 @@ $(document).ready(function () {
 });
 
 // ********************aggeep*************
-const btn_election = document.getElementById("btn_election");
-const btn_archive = document.getElementById("btn_archive");
 
-const election = document.getElementById("election");
-const archive = document.getElementById("archive");
-const ag_div = document.getElementById("quinous");
-
-let list_agge = [election, archive, ag_div];
-let v_election = false;
-let v_archive = false;
 
 
 
@@ -208,8 +223,7 @@ function slide(e) {
   }
 }
 
-const section_elec = document.getElementById("section_elec");
-const flex_elec = document.getElementById("flex_elec");
+
 console.log(flex_elec);
 
 function slide_elec(e, ele) {
@@ -230,6 +244,29 @@ function slide_elec(e, ele) {
   }
 }
 
+function slide_elec2(e, ele) {
+  const element = document.getElementById(e);
+
+
+    for (const child of sectp.children) {
+      child.style.height = "0vh";
+    
+
+    for (const child of flex_phil.children) {
+      child.style.color = "#edf4f8";
+      child.style.borderColor = "#edf4f8";
+    }
+    ele.style.color = "#E50313";
+    ele.style.borderColor = "#E50313";
+    element.style.height = "auto";
+  }
+}
+
+
 slide_elec("affaires_socioculturelles");
 
 document.getElementById("postfb").style.background = "white";
+
+
+
+

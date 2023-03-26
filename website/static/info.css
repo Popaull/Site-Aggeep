@@ -14,13 +14,13 @@
     margin-left: 2%;
     text-align: center;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 35vw;
+    margin-right: 35vw;
     top: 10%;
-    font-size: 3.5vh;
+    font-size: 1.5vw;
     letter-spacing: 0.5rem;
     
-    width: 20%;
+    width: auto;
     
 }
 .titre_c h1{
@@ -65,7 +65,7 @@
 ****************************************************SLider************************************************* */
 #vie_etudiante{
     background: #0f0f0f;
-    height: 110vh;
+    height: 60vw;
     width: 100vw;
 }
 
@@ -82,20 +82,20 @@
 
 #precedent,
 #suivant {
+  display: flex;
     cursor: pointer;
     transition: opacity 0.3s ease;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
-    top:250px;
+    
     font-size: 100px;
     color: rgba(220, 220, 220, 0.8);
-   
-    padding: 10px;
+    align-items: center;
+    
 }
 
 .contslider{
-    position:relative;
-    top: 200px;
+    padding-top: 10%;
     justify-content: space-between;
     display: flex;
 }
@@ -113,7 +113,7 @@
 
 .slider {
     display: flex;
-    width: 600px;
+    width: 32vw;
     top:20%;
     margin-left: auto;
     margin-right: auto;
@@ -121,8 +121,8 @@
   }
   .slider-viewport {
    
-    width: 600px;
-    height: 700px;
+    width: 32vw;
+    height: 40vw;
     overflow: hidden;
   }
   .slider-content {
@@ -132,8 +132,8 @@
     transition: 1s all;
   }
   .slider-content img {
-    width: 600px;
-    height: 700px;
+    width: 32vw;
+    height: 40vw;
   }
   .slider-nav {
     position: absolute;
@@ -144,44 +144,44 @@
   }
   
   #img2:target .slider-content {
-    -webkit-transform: translateX(-600px);
-            transform: translateX(-600px);
+    -webkit-transform: translateX(-32vw);
+            transform: translateX(-32vw);
   }
   #img3:target .slider-content {
-    -webkit-transform: translateX(-1200px);
-            transform: translateX(-1200px);
+    -webkit-transform: translateX(-64vw);
+            transform: translateX(-64vw);
   }
   #img4:target .slider-content {
-    -webkit-transform: translateX(-1800px);
-            transform: translateX(-1800px);
+    -webkit-transform: translateX(-96vw);
+            transform: translateX(-96vw);
   }
   #img5:target .slider-content {
-    -webkit-transform: translateX(-2400px);
-            transform: translateX(-2400px);
+    -webkit-transform: translateX(-128vw);
+            transform: translateX(-128vw);
   }
   #img6:target .slider-content {
-    -webkit-transform: translateX(-3000px);
-            transform: translateX(-3000px);
+    -webkit-transform: translateX(-160vw);
+            transform: translateX(-160vw);
   }
   #img7:target .slider-content {
-    -webkit-transform: translateX(-3600px);
-            transform: translateX(-3600px);
+    -webkit-transform: translateX(-192vw);
+            transform: translateX(-192vw);
   }
   #img8:target .slider-content {
-    -webkit-transform: translateX(-4200px);
-            transform: translateX(-4200px);
+    -webkit-transform: translateX(-224vw);
+            transform: translateX(-224vw);
   }
   #img9:target .slider-content {
-    -webkit-transform: translateX(-4800px);
-            transform: translateX(-4800px);
+    -webkit-transform: translateX(-256vw);
+            transform: translateX(-256vw);
   }
   #img10:target .slider-content {
-    -webkit-transform: translateX(-5400px);
-            transform: translateX(-5400px);
+    -webkit-transform: translateX(-288vw);
+            transform: translateX(-288vw);
   }
   #img11:target .slider-content {
-    -webkit-transform: translateX(-6000px);
-            transform: translateX(-6000px);
+    -webkit-transform: translateX(-320vw);
+            transform: translateX(-320vw);
   }
 
   /* *******************************vie_universitaire***************************************** */

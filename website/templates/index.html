@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>PhiloUL</title>
     <link
       rel="stylesheet"
@@ -97,23 +98,28 @@
       "
     ></div>
     <section id="philosophe_de_la_semaine">
-      <div class="flex_aggeep">
+      <div id="flex_phil" class="flex_aggeep">
         <h3
-          onclick="slide('election')"
-          style="width: auto; padding-left: 10px; padding-right: 10px"
+          onclick="slide_elec2('divps',this)"
+          style="color: #E50313; width: auto; padding-left: 10px; padding-right: 10px"
         >
           Le philosophe de la semaine
         </h3>
 
         <h3
-          onclick="slide('quinous')"
+        onclick="slide_elec2('divaps',this)"
           style="width: auto; padding-left: 10px; padding-right: 10px"
         >
           Archive des philosophe de la semaine
         </h3>
       </div>
-      <div id="divps">{{philo|safe}}</div>
-      <div id="divaps"></div>
+      <div id="sect_p">
+      <div style="overflow: hidden; transition: 0.5s !important;" id="divps">{{philo|safe}}</div>
+      <div  style="height: 0px; overflow: hidden; transition: 0.5s !important;" id="divaps">
+        {{arch_phil|safe}}
+      </div>
+
+      </div>
     </section>
 
     <div
@@ -121,7 +127,7 @@
       style="background: linear-gradient(0deg, #0f0f0f 0%, #0a0a0a 85%)"
     ></div>
     <section id="aggeep">
-      <h1>AGGEEP</h1>
+      
       <div class="flex_aggeep">
         <h3 onclick="slide('election')">Election</h3>
         <h3 onclick="slide('archive')">Archive</h3>
@@ -130,6 +136,7 @@
     </section>
     <section id="election">
       <h1>Election</h1>
+      <div class="phoneelec">
       <div id="flex_elec">
         <h3 id="first" onclick="slide_elec('affaires_socioculturelles',this)">
           Affaires socioculturelles
@@ -320,6 +327,7 @@
           </p>
         </section>
       </div>
+      </div>
     </section>
     <section id="archive">
       <h1>Archive</h1>
@@ -353,47 +361,47 @@
                                 <div id="img11">
                                   <div class="slider-content">
                                     <img
-                                      src="{{ url_for('static', filename='/slider/0.png')}}"
+                                      src="{{ url_for('static', filename='slider/0.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/1.png')}}"
+                                      src="{{ url_for('static', filename='slider/1.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/2.png')}}"
+                                      src="{{ url_for('static', filename='slider/2.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/3.png')}}"
+                                      src="{{ url_for('static', filename='slider/3.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/4.png')}}"
+                                      src="{{ url_for('static', filename='slider/4.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/7.png')}}"
+                                      src="{{ url_for('static', filename='slider/7.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/8.png')}}"
+                                      src="{{ url_for('static', filename='slider/8.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/9.png')}}"
+                                      src="{{ url_for('static', filename='slider/9.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/11.png')}}"
+                                      src="{{ url_for('static', filename='slider/11.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/12.png')}}"
+                                      src="{{ url_for('static', filename='slider/12.png')}}"
                                       alt="slider"
                                     />
                                     <img
-                                      src="{{ url_for('static', filename='/slider/13.png')}}"
+                                      src="{{ url_for('static', filename='slider/13.png')}}"
                                       alt="slider"
                                     />
                                   </div>

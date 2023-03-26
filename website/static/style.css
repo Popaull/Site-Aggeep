@@ -28,10 +28,10 @@ a:hover{
     right: 0;
     justify-content: space-between;
     height: 100px ;
-    margin-left: 100px;
+    margin-left: 5vw;
     z-index: 5;
     color: rgb(235, 246, 255);
-    margin-right: 100px;
+    margin-right: 5vw;
     
    
 }
@@ -183,20 +183,20 @@ a:hover{
   
   background-size: cover;
 }
-.contp{
+
+.img_phil{
  
-}
-.contp img{
-  position: relative;
-  right: 30vw;
   width:20vw ;
-  margin-left: 5vw;
+  height: 25vw;
+  margin-left: 3%;
+  padding-top:3%;
  
-  bottom: 35vw;
- 
   
   
   
+}
+.flexphil{
+  display: flex;
 }
 
 .fondu{
@@ -361,21 +361,21 @@ h1{
 }
 .flextxt h2 {
     color: #232F5F;
-    font-size: 2.3vh;
+    font-size: 1.5vw;
     letter-spacing: 0.3rem;
     padding-left: 30px;
 }
 .flextxt h3{
     letter-spacing: 0.2rem;
    font-style: italic;
-   font-size: 2.3vh;
+   font-size: 1.3vw;
    color: #151f47;
    padding-left: 40px;
 }
 .flextxt h4{
     letter-spacing: 0.2rem;
     padding-top: 10px;
-    font-size: 1.5vh;
+    font-size: 0.8vw;
    color: #464646;
    padding-left: 10px;
   
@@ -385,7 +385,7 @@ h1{
 .arrow
 {
   position: relative;
-  margin-top: 30vh;
+  margin-top: 10vw;
 
   left: 50%;
   margin-left:-20px;
@@ -469,6 +469,23 @@ h1{
   
 }
 
+#divps{
+  position: relative;
+}
+#divaps p{
+  font-size:1vw ;
+}
+#divaps img{
+  width:30 ;
+}
+
+#divaps .flexphil{
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3%;
+  width: 90%;
+  border-bottom: 3px solid #FFFFFF;
+}
 .flex_aggeep{
   display: flex;
   justify-content: space-around;
@@ -479,16 +496,21 @@ h1{
   
   border-radius: 3px;
   transition: 0.5s;
-  font-size: 1.5em;
+  font-size: 2.5vw;
+  pointer-events:stroke;
   text-align: center;
-  border: 2px solid #edf4f8;
-  width: 10%;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .flex_aggeep h3:hover{
   color: #E50313;
   border-color: #E50313;
 }
 
+.flex_aggeep h3:nth-child(2){
+  margin-left: 12.5vw;
+}
 #election,#archive,#quinous{
  overflow: hidden;
  transition: 0.5s;
